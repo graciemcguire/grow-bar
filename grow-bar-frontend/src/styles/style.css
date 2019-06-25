@@ -1,0 +1,10 @@
+h1 {
+  color: red; }
+
+.cocktail-card {
+  display: flex; }
+  .cocktail-card img {
+    width: 33%;
+    height: 33%; }
+
+/*# sourceMappingURL=style.css.map */
