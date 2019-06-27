@@ -2,11 +2,31 @@ h1 {
   color: red;
 }
 
+.drink-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100vw;
+}
+
 .cocktail-card {
   display: flex;
+  // flex-grow: 3;
+  width: 33%;
 
   img {
-    width: 33%;
-    height: 33%;
+    width: 100%;
+    height: 600px;
   }
+  img:hover {
+    opacity: .2;
+  }
+}
+
+.header-div {
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  height: 15vh;
+
 }

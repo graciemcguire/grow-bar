@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CocktailCard from "./CocktailCard"
+import Header from "./Header"
 
 export default class CocktailContainer extends Component {
 
@@ -25,7 +26,7 @@ export default class CocktailContainer extends Component {
 
   renderCocktailCards = () => {
     const cocktailCards = this.state.drinks.map((drink, index) => {
-      return <CocktailCard drink={drink} key={index} />
+      return <CocktailCard drink={drink} key={index}/>
     })
     return cocktailCards;
     // console.log(this.state.drinks);
@@ -34,15 +35,11 @@ export default class CocktailContainer extends Component {
   render() {
     return (
       <div>
+        <Header handleChange={this.handleChange} fetchDrinks={this.fetchDrinks} drinkValue={this.state.drinkValue}/>
+        <div className="drink-flexbox">
+          {this.state.drinks.length === 0 ? null : this.renderCocktailCards()}
+        </div>
 
-        <h1>{this.state.drinkValue}</h1>
-        <form onSubmit={this.fetchDrinks}>
-          <label>drink?</label>
-          <input value={this.state.drinkValue || ""} onChange={this.handleChange}/>
-          <button>find my drink</button>
-        </form>
-
-        {this.state.drinks.length === 0 ? null : this.renderCocktailCards()}
       </div>
     )
   }
