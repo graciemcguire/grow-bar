@@ -11,9 +11,8 @@ const port = process.env.PORT || 3000;
 
 app.get("/drink/:ingredient", async (req, res) => {
   try {
-    const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${req.params.ingredient}`);
+    const response = await fetch(`https://www.thecocktaildb.com/api/json/v2/8673533/search.php?s=${req.params.ingredient}`);
     const json = await response.json();
-    console.log(json);
     res.send(json.drinks);
   } catch (e) {
     res.status(400).send(`something went wrong ¯\_(ツ)_/¯ `);

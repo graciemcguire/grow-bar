@@ -29,7 +29,6 @@ export default class CocktailContainer extends Component {
       return <CocktailCard drink={drink} key={index}/>
     })
     return cocktailCards;
-    // console.log(this.state.drinks);
   }
 
   render() {
