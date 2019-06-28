@@ -8,14 +8,12 @@ export default class CocktailCard extends Component {
   }
 
   handleMouseEnter = () => {
-    console.log("working");
     this.setState({
       hover: true
     })
   }
 
   handleMouseLeave = () => {
-    console.log("left yo ass");
     this.setState({
       hover: false
     })
@@ -23,11 +21,12 @@ export default class CocktailCard extends Component {
 
   render() {
     const { drink } = this.props
-    // console.log('in the card', this.props)
     return (
       <div className="cocktail-card" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
         {!this.state.hover ?
-          <img src= { drink.strDrinkThumb } />
+        <div>
+          <img src={ drink.strDrinkThumb } className="drink-image" alt="drink thumbnail"/>
+        </div>
           :
           <CocktailCardHover drink={ drink }/>
         }
