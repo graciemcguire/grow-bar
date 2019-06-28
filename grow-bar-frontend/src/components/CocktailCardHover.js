@@ -8,7 +8,7 @@ export default class CocktailCard extends Component {
     return (
       <div>
         <h1>{ drink.strDrink }</h1>
-        <img src={drink.strDrinkThumb}/>
+        <img src={ drink.strDrinkThumb }/>
       </div>
     )
   }
