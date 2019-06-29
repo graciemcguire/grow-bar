@@ -14,6 +14,12 @@ export default class CocktailCardHover extends Component {
     })
   }
 
+  closeModal = () => {
+    this.setState({
+      showInstructions: false
+    })
+  }
+
 
   render(){
     const { drink, info } = this.props
@@ -27,7 +33,7 @@ export default class CocktailCardHover extends Component {
           <button onClick={this.renderInstructions}> Details </button>
         </div>
 
-        { this.state.showInstructions ? <InstructionsModal drink={ drink } info={ info }/> : null }
+        { this.state.showInstructions ? <InstructionsModal drink={ drink } info={ info } closeModal={this.closeModal}/> : null }
 
       </div>
     )

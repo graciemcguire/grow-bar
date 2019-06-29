@@ -1,70 +1,60 @@
 @import url("https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 *, body, html {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 h1 {
-  color: red;
-}
+  color: red; }
 
 .drink-flexbox {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 100vw;
-}
+  width: 100vw; }
 
 .cocktail-card {
   display: flex;
   width: 33%;
   height: 60vh;
-  overflow: hidden;
-}
-.cocktail-card .drink-image {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.cocktail-card .drink-info-overlay {
-  position: relative;
-  bottom: 95%;
-  width: 90%;
-  height: 80%;
-  margin: 0 auto;
-  text-align: center;
-  font-family: "Sorts Mill Goudy", serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.cocktail-card .drink-info-overlay li {
-  list-style-type: none;
-  margin-bottom: 15px;
-  font-weight: bold;
-  font-size: 0.9em;
-}
-.cocktail-card .drink-info-overlay h3 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-.cocktail-card .drink-info-overlay p {
-  font-size: 0.8em;
-}
-.cocktail-card .drink-info-overlay button {
-  margin-top: 40px;
-  padding: 5px 10px 2px 10px;
-  transition: 0.35s ease;
-  align-self: center;
-  width: 50%;
-  background-color: rgba(0, 0, 0, 0.2);
-  font-family: "Sorts Mill Goudy", serif;
-}
-.cocktail-card .drink-info-overlay button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-}
+  overflow: hidden; }
+  .cocktail-card .drink-image {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+  .cocktail-card .drink-info-overlay {
+    position: relative;
+    bottom: 95%;
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Sorts Mill Goudy", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .cocktail-card .drink-info-overlay li {
+      list-style-type: none;
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: .9em; }
+    .cocktail-card .drink-info-overlay h3 {
+      font-size: 2.5em;
+      margin-bottom: 10px; }
+    .cocktail-card .drink-info-overlay p {
+      font-size: .8em; }
+    .cocktail-card .drink-info-overlay button {
+      margin-top: 40px;
+      padding: 5px 10px 2px 10px;
+      transition: .35s ease;
+      align-self: center;
+      width: 50%;
+      background-color: rgba(0, 0, 0, 0.2);
+      font-family: "Sorts Mill Goudy", serif; }
+    .cocktail-card .drink-info-overlay button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white; }
 
 .instructions-overlay {
   position: fixed;
@@ -76,37 +66,42 @@ h1 {
   z-index: 3;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-.instructions-overlay .instructions-modal {
-  height: 90vh;
-  width: 90vw;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  color: white;
-  text-align: center;
-}
-.instructions-overlay .instructions-modal img {
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-}
-.instructions-overlay .instructions-modal span {
-  font-size: 0.7em;
-  font-weight: bold;
-  padding: 20px;
-}
-.instructions-overlay .instructions-modal p {
-  width: 75%;
-}
+  background-color: rgba(0, 0, 0, 0.9); }
+  .instructions-overlay .instructions-modal {
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; }
+    .instructions-overlay .instructions-modal img {
+      height: 300px;
+      width: 300px;
+      border-radius: 50%; }
+    .instructions-overlay .instructions-modal span {
+      font-size: .8em;
+      font-weight: bold;
+      padding: 20px; }
+    .instructions-overlay .instructions-modal h3 {
+      font-size: 2em;
+      font-family: "Sorts Mill Goudy", serif; }
+    .instructions-overlay .instructions-modal p {
+      width: 60%;
+      font-size: 1.3em; }
+    .instructions-overlay .instructions-modal button {
+      position: relative;
+      top: -10%;
+      align-self: flex-end;
+      margin-right: 10%;
+      padding: 5px 10px; }
 
 .opaque-drink {
-  opacity: 0.5;
-}
+  opacity: .5; }
 
 .header-div {
   background-color: lavender;
@@ -114,14 +109,12 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 15vh;
-}
-.header-div .drink-input {
-  padding: 10px 15px;
-  width: 60vw;
-  font-size: 2em;
-  height: 70%;
-  text-align: center;
-}
+  height: 15vh; }
+  .header-div .drink-input {
+    padding: 10px 15px;
+    width: 60vw;
+    font-size: 2em;
+    height: 70%;
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

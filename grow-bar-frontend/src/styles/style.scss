@@ -3,6 +3,7 @@
 //   justify-content: $just-content;
 // }
 @import url('https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 *, body, html {
   padding: 0;
@@ -98,20 +99,32 @@ h1 {
     border-radius: 10px;
     color: white;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
     img {
       height: 300px;
       width: 300px;
       border-radius: 50%;
     }
     span {
-      font-size: .7em;
+      font-size: .8em;
       font-weight: bold;
       padding: 20px;
     }
+    h3 {
+      font-size: 2em;
+      font-family: "Sorts Mill Goudy", serif;
+    } 
 
     p {
-      width: 75%;
-
+      width: 60%;
+      font-size: 1.3em;
+    }
+    button {
+      position: relative;
+      top: -10%;
+      align-self: flex-end;
+      margin-right: 10%;
+      padding: 5px 10px;
     }
 
   }
