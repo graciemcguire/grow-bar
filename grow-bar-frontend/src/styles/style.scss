@@ -61,12 +61,16 @@ h1 {
     }
     button {
       margin-top: 40px;
-      padding: 2px 10px;
+      padding: 5px 10px 2px 10px;
       transition: .35s ease;
+      align-self: center;
+      width: 50%;
       background-color: rgba(0, 0, 0, .2);
+      font-family: "Sorts Mill Goudy", serif;
     }
     button:hover {
       background-color: rgba(0, 0, 0, .8);
+      color: white;
     }
   }
 }
