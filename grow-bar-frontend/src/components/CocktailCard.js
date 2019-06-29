@@ -3,6 +3,7 @@ import CocktailCardHover from './CocktailCardHover'
 
 export default class CocktailCard extends Component {
 
+
   state = {
     hover: false,
     drinkInfo: [],
@@ -31,10 +32,10 @@ export default class CocktailCard extends Component {
     const ingredients = []
     const measurements = []
     for (let [key, value] of Object.entries(this.props.drink)) {
-      if(key.includes("strIngredient") && value !== "") {
+      if(key.includes("strIngredient") && value !== "" && key.includes("strIngredient") && value !== null) {
         ingredients.push(value);
       }
-      if(key.includes("strMeasure") && value !== "") {
+      if(key.includes("strMeasure") && value !== "" && key.includes("strMeasure") && value !== null) {
         measurements.push(value);
       }
     }

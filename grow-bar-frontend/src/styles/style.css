@@ -1,69 +1,112 @@
 *, body, html {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 h1 {
-  color: red; }
+  color: red;
+}
 
 .drink-flexbox {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 95vw;
-  justify-self: center; }
+  width: 100vw;
+}
 
 .cocktail-card {
   display: flex;
-  width: 350px;
-  height: 400px;
+  width: 33%;
+  height: 60vh;
   overflow: hidden;
-  margin: 20px 0; }
-  .cocktail-card .drink-image {
-    width: 100%;
-    height: 400px;
-    position: relative; }
-  .cocktail-card .drink-info-overlay {
-    position: relative;
-    bottom: 85%;
-    width: 90%;
-    margin: 0 auto;
-    text-align: center; }
-    .cocktail-card .drink-info-overlay .ingredients-list {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between; }
-    .cocktail-card .drink-info-overlay li {
-      list-style-type: none;
-      margin-bottom: 15px;
-      font-weight: bold;
-      font-size: .9em; }
-    .cocktail-card .drink-info-overlay h3 {
-      font-size: 2.5em;
-      margin-bottom: 10px; }
-    .cocktail-card .drink-info-overlay p {
-      font-size: .8em; }
+}
+.cocktail-card .drink-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.cocktail-card .drink-info-overlay {
+  position: relative;
+  bottom: 95%;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.cocktail-card .drink-info-overlay .ingredients-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cocktail-card .drink-info-overlay li {
+  list-style-type: none;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.cocktail-card .drink-info-overlay h3 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.cocktail-card .drink-info-overlay p {
+  font-size: 0.8em;
+}
 
 .instructions-overlay {
   position: fixed;
-  left: 50%;
-  top: 50%; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.instructions-overlay .instructions-modal {
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+}
+.instructions-overlay .instructions-modal img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.instructions-overlay .instructions-modal span {
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 20px;
+}
+.instructions-overlay .instructions-modal p {
+  width: 75%;
+}
 
 .opaque-drink {
-  opacity: .2; }
+  opacity: 0.2;
+}
 
 .header-div {
-  background-color: beige;
+  background-color: lavender;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 15vh; }
-  .header-div .drink-input {
-    padding: 10px 15px;
-    width: 60vw;
-    font-size: 2em;
-    text-align: center; }
+  height: 15vh;
+}
+.header-div .drink-input {
+  padding: 10px 15px;
+  width: 60vw;
+  font-size: 2em;
+  height: 70%;
+  text-align: center;
+}
 
 /*# sourceMappingURL=style.css.map */

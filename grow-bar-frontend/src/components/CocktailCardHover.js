@@ -22,20 +22,21 @@ export default class CocktailCardHover extends Component {
 
 
   render(){
-    const { drink } = this.props
+    const { drink, info } = this.props
+
     return (
       <div className="hovered-drink" >
         <img src={drink.strDrinkThumb} className="drink-image opaque-drink" alt="drink thumbnail"/>
-        <div className="drink-info-overlay"> 
+        <div className="drink-info-overlay">
           <h3>{ drink.strDrink }</h3>
 
           <div className="ingredients-list">
-            { this.renderDrinkInfo() } 
+            { this.renderDrinkInfo() }
           </div>
           <button onClick={this.renderInstructions}> Instructions </button>
         </div>
 
-        { this.state.showInstructions ? <InstructionsModal /> : null }
+        { this.state.showInstructions ? <InstructionsModal drink={ drink } info={ info }/> : null }
 
       </div>
     )

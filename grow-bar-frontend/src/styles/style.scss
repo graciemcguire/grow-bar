@@ -1,7 +1,7 @@
-@mixin flex-justify($just-content) {
-  display: flex;
-  justify-content: $just-content;
-}
+// @mixin flex-justify($just-content) {
+//   display: flex;
+//   justify-content: $just-content;
+// }
 
 *, body, html {
   padding: 0;
@@ -14,29 +14,29 @@ h1 {
 }
 
 .drink-flexbox {
-  @include flex-justify(space-around);
+  // @include flex-justify(space-around);
+  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 95vw;
-  justify-self: center;
+  width: 100vw;
 }
 
 .cocktail-card {
   display: flex;
-  width: 350px;
-  height: 400px;
+  width: 33%;
+  height: 60vh;
   overflow: hidden;
-  margin: 20px 0;
+
 
   .drink-image {
     width: 100%;
-    height: 400px;
+    height: 100%;
     position: relative;
   }
 
   .drink-info-overlay {
     position: relative;
-    bottom: 85%;
+    bottom: 95%;
     width: 90%;
     margin: 0 auto;
     text-align: center;
@@ -65,17 +65,53 @@ h1 {
 
 .instructions-overlay {
   position: fixed;
-  left: 50%;
-  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .9);
   // transform: translate(-50%, -50%);
+  .instructions-modal {
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0, 0.7);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    img {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+    }
+    span {
+      font-size: .7em;
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    p {
+      width: 75%;
+
+    }
+
+  }
 }
+
+
 
 .opaque-drink {
   opacity: .2;
 }
 
 .header-div {
-  background-color: beige;
+  background-color: lavender;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,8 +121,7 @@ h1 {
       padding: 10px 15px;
       width: 60vw;
       font-size: 2em;
+      height: 70%;
       text-align: center;
     }
 }
-
-
