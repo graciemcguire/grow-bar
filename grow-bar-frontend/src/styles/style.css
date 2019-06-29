@@ -45,6 +45,11 @@ h1 {
     .cocktail-card .drink-info-overlay p {
       font-size: .8em; }
 
+.instructions-overlay {
+  position: fixed;
+  left: 50%;
+  top: 50%; }
+
 .opaque-drink {
   opacity: .2; }
 

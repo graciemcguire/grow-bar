@@ -53,8 +53,6 @@ export default class CocktailCard extends Component {
 
   render() {
     const { drink } = this.props
-    // console.log(this.removeEmpty());
-    // console.log(this.concatDrinks())
     return (
       <div className="cocktail-card" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
         {!this.state.hover ?
