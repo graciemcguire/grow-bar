@@ -14,12 +14,6 @@ export default class CocktailCardHover extends Component {
     })
   }
 
-  renderDrinkInfo = () => {
-    return this.props.info.map((el, index) => {
-      return <li key={index}> {el} </li>
-    })
-  }
-
 
   render(){
     const { drink, info } = this.props
@@ -30,10 +24,7 @@ export default class CocktailCardHover extends Component {
         <div className="drink-info-overlay">
           <h3>{ drink.strDrink }</h3>
 
-          <div className="ingredients-list">
-            { this.renderDrinkInfo() }
-          </div>
-          <button onClick={this.renderInstructions}> Instructions </button>
+          <button onClick={this.renderInstructions}> Details </button>
         </div>
 
         { this.state.showInstructions ? <InstructionsModal drink={ drink } info={ info }/> : null }
@@ -42,3 +33,9 @@ export default class CocktailCardHover extends Component {
     )
   }
 }
+
+// renderDrinkInfo = () => {
+//   return this.props.info.map((el, index) => {
+//     return <li key={index}> {el} </li>
+//   })
+// }
