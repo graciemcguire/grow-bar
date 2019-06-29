@@ -49,7 +49,6 @@ export default class CocktailCard extends Component {
     this.setState({
       drinkInfo: arr
     })
-    console.log(this.state.drinkInfo);
   }
 
   render() {
@@ -63,7 +62,7 @@ export default class CocktailCard extends Component {
           <img src={ drink.strDrinkThumb } className="drink-image" alt="drink thumbnail"/>
         </div>
           :
-          <CocktailCardHover drink={ drink } info={this.state.drinkInfo}/>
+          <CocktailCardHover drink={ drink } info={this.state.drinkInfo} key={drink.idDrink}/>
         }
 
       </div>

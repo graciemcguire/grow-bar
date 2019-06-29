@@ -16,21 +16,29 @@ h1 {
 
 .cocktail-card {
   display: flex;
-  width: 30%;
+  width: 350px;
   height: 400px;
   overflow: hidden;
   margin: 20px 0; }
   .cocktail-card .drink-image {
     width: 100%;
-    height: 500px;
+    height: 400px;
     position: relative; }
   .cocktail-card .drink-info-overlay {
     position: relative;
     bottom: 85%;
-    bottom: 120%;
     width: 90%;
     margin: 0 auto;
     text-align: center; }
+    .cocktail-card .drink-info-overlay .ingredients-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+    .cocktail-card .drink-info-overlay li {
+      list-style-type: none;
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: .9em; }
     .cocktail-card .drink-info-overlay h3 {
       font-size: 2.5em;
       margin-bottom: 10px; }
