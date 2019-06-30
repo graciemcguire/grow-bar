@@ -16,7 +16,6 @@ h1 {
 }
 
 .drink-flexbox {
-  // @include flex-justify(space-around);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -25,7 +24,7 @@ h1 {
 
 .cocktail-card {
   display: flex;
-  width: 33%;
+  width: 33.3%;
   height: 60vh;
   overflow: hidden;
 
@@ -150,4 +149,62 @@ h1 {
       height: 70%;
       text-align: center;
     }
+}
+
+@media only screen and (max-width: 1024px) {
+  .drink-flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100vw;
+  }
+  
+  .cocktail-card {
+    display: flex;
+    width: 50%;
+    height: 40vh;
+    overflow: hidden;
+  
+  
+    .drink-image {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  .instructions-modal {
+    p {
+      font-size: 1em;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .drink-flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100vw;
+  }
+  
+  .cocktail-card {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+  
+  
+    .drink-image {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  .instructions-modal {
+    p {
+      font-size: 1em;
+    }
+  }
 }
