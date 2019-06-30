@@ -27,6 +27,12 @@ export default class CocktailCard extends Component {
     })
   }
 
+  changeHoverState = () => {
+    this.setState({
+      hover: false
+    })
+  }
+
 
   removeEmpty = () => {
     const ingredients = []
@@ -61,7 +67,7 @@ export default class CocktailCard extends Component {
           <img src={ drink.strDrinkThumb } className="drink-image" alt="drink thumbnail"/>
         </div>
           :
-          <CocktailCardHover drink={ drink } info={this.state.drinkInfo} key={drink.idDrink}/>
+          <CocktailCardHover key={drink.idDrink} drink={ drink } info={this.state.drinkInfo} changeHoverState={this.changeHoverState} />
         }
 
       </div>

@@ -13,6 +13,7 @@ export default class InstructionsModal extends Component {
 
     handleClose = () => {
       this.props.closeModal();
+      this.props.changeHoverState();
       this.setState(prevState => {
         return {
           count: prevState.count + 1 

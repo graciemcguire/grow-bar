@@ -1,18 +1,36 @@
 // @mixin flex-justify($just-content) {
-//   display: flex;
-//   justify-content: $just-content;
-// }
-@import url('https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
-*, body, html {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-h1 {
-  color: red;
+  //   display: flex;
+  //   justify-content: $just-content;
+  // }
+  @import url('https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+  
+  *, body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    color: red;
+  }
+  
+.header-div {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 15vh;
+  width: 100vw;
+  max-width: 100%;
+    .drink-input {
+      padding: 10px 15px;
+      width: 60vw;
+      font-size: 2em;
+      height: 70%;
+      text-align: center;
+    }
 }
 
 .drink-flexbox {
@@ -20,11 +38,12 @@ h1 {
   flex-wrap: wrap;
   flex-direction: row;
   width: 100vw;
+  max-width: 100%;
 }
 
 .cocktail-card {
   display: flex;
-  width: 33.3%;
+  width: 33.33%;
   height: 60vh;
   overflow: hidden;
 
@@ -60,13 +79,13 @@ h1 {
       font-size: .8em;
     }
     button {
-      margin-top: 40px;
       padding: 5px 10px 2px 10px;
-      transition: .35s ease;
       align-self: center;
       width: 50%;
-      background-color: rgba(0, 0, 0, .2);
+      background-color: rgba(0, 0, 0, .1);
       font-family: "Sorts Mill Goudy", serif;
+      font-size: 1.1em;
+      transition: .35s ease;
     }
     button:hover {
       background-color: rgba(0, 0, 0, .8);
@@ -123,6 +142,7 @@ h1 {
       position: relative;
       align-self: flex-end;
       margin-right: 10%;
+      top: -5%;
       font-size: 1em;
       font-family: "Sorts Mill Goudy", serif;
       padding: 7px 10px 3px 10px;
@@ -135,21 +155,6 @@ h1 {
   opacity: .5;
 }
 
-.header-div {
-  background-color: lavender;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 15vh;
-    .drink-input {
-      padding: 10px 15px;
-      width: 60vw;
-      font-size: 2em;
-      height: 70%;
-      text-align: center;
-    }
-}
 
 @media only screen and (max-width: 1024px) {
   .drink-flexbox {

@@ -33,7 +33,7 @@ export default class CocktailCardHover extends Component {
           <button onClick={this.renderInstructions}> Details </button>
         </div>
 
-        { this.state.showInstructions ? <InstructionsModal drink={ drink } info={ info } closeModal={this.closeModal}/> : null }
+        { this.state.showInstructions ? <InstructionsModal drink={ drink } info={ info } closeModal={this.closeModal} changeHoverState={this.props.changeHoverState}/> : null }
 
       </div>
     )
