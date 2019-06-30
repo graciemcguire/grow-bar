@@ -82,7 +82,8 @@ h1 {
     .instructions-overlay .instructions-modal img {
       height: 300px;
       width: 300px;
-      border-radius: 50%; }
+      border-radius: 50%;
+      margin-bottom: 20px; }
     .instructions-overlay .instructions-modal span {
       font-size: .8em;
       font-weight: bold;
@@ -95,10 +96,11 @@ h1 {
       font-size: 1.3em; }
     .instructions-overlay .instructions-modal button {
       position: relative;
-      top: -10%;
       align-self: flex-end;
       margin-right: 10%;
-      padding: 5px 10px; }
+      font-size: 1em;
+      font-family: "Sorts Mill Goudy", serif;
+      padding: 7px 10px 3px 10px; }
 
 .opaque-drink {
   opacity: .5; }
