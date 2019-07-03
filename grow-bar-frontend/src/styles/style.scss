@@ -2,22 +2,35 @@
   //   display: flex;
   //   justify-content: $just-content;
   // }
-  @import url('https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-  
-  *, body, html {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+@import url('https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-  body {
-    min-width: 370px;
+*, body, html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 370px;
+}
+
+h1 {
+  color: red;
+}
+
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    background-color: white;
   }
-  
-  h1 {
-    color: red;
-  }
+}
   
 .header-div {
   background-color: black;
@@ -111,14 +124,14 @@
   z-index: 3;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, .7);
   // transform: translate(-50%, -50%);
   .instructions-modal {
     height: 90vh;
     width: 90vw;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0,0,0, 0.7);
+    background-color: rgba(0,0,0, 0.5);
     justify-content: center;
     align-items: center;
     border-radius: 10px;

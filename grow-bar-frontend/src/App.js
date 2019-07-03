@@ -1,15 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles/style.css'
 import CocktailContainer from "./components/CocktailContainer"
+import HomeScreen from './components/HomeScreen';
 
-function App() {
-  return (
-    <div className="App">
+export default class App extends Component {
 
-      <CocktailContainer />
+  state = {
+    homePage: true
+  }
+
+  renderContainer = () => {
+    this.setState({
+      homePage: false
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+
+      {this.state.homePage ? <HomeScreen renderContainer={this.renderContainer}/> : <CocktailContainer />}
+
 
     </div>
   );
+  } 
 }
 
-export default App;
+
+
