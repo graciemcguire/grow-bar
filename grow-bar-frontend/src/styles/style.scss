@@ -26,6 +26,8 @@ h1 {
   button {
     background-color: white;
   }
+
+  .active {color: white;}
 }
   
 .header-div {
@@ -190,6 +192,14 @@ h1 {
 .opaque-drink {
   opacity: .5;
 }
+
+// ----------------- ANIMATIONS ------------------//
+
+.active {
+  color: green;
+}
+
+// -----------------------------------------------//
 
 
 @media only screen and (max-width: 1024px) {

@@ -20,6 +20,8 @@ h1 {
   align-items: center; }
   .home-container button {
     background-color: white; }
+  .home-container .active {
+    color: white; }
 
 .header-div {
   background-color: black;
@@ -155,6 +157,9 @@ h1 {
 
 .opaque-drink {
   opacity: .5; }
+
+.active {
+  color: green; }
 
 @media only screen and (max-width: 1024px) {
   .drink-flexbox {
