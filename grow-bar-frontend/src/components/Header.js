@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import {FaCocktail} from "react-icons/fa";
+
 
 export default class Header extends Component {
 
@@ -6,14 +8,9 @@ export default class Header extends Component {
   render () {
     return (
       <div className='header-div'>
-        <h1> 
-          <span role="img" aria-label="martini emoji">🍸</span>
-          Working
-          <span role="img" aria-label="martini emoji">🍸</span> 
-        </h1>
         <form onSubmit={this.props.fetchDrinks}>
-          <input value={this.props.drinkValue || ""} onChange={this.props.handleChange} className="drink-input"/>
-          <button>find my drink</button>
+          <input value={this.props.drinkValue || ""} onChange={this.props.handleChange} className="drink-input" placeholder="Throw Ingredients Here"/>
+          <button><FaCocktail className="cocktail-icon"/></button>
         </form>
       </div>
     )
