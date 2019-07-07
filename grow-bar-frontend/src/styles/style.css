@@ -21,8 +21,18 @@ h1 {
   .home-container button {
     background-color: white; }
   .home-container .active {
-    color: white; }
+    color: #857474;
+    animation: bounceIn 2s; }
 
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0; }
+  60% {
+    transform: scale(1.2);
+    opacity: 1; }
+  100% {
+    transform: scale(1); } }
 .header-div {
   background-color: black;
   display: flex;

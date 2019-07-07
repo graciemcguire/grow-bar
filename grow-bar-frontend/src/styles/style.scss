@@ -27,9 +27,27 @@ h1 {
     background-color: white;
   }
 
-  .active {color: white;}
+  .active {
+    color: rgb(133, 116, 116);
+    animation: bounceIn 2s;
+  }
 }
   
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 .header-div {
   background-color: black;
   display: flex;

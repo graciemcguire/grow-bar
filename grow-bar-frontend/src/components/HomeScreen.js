@@ -4,27 +4,28 @@ import React, { Component } from 'react';
 class HomeScreen extends Component {
 
     state = {
-        active: false
+        renderInput: false
     }
 
-    addActiveClass = () => {
-        this.setState({
-            active: true
-        })
+    renderInput = () => {
+        this.setState(prevState => ({
+            renderInput: !prevState.renderInput
+        }))
     }
 
-    getClassName = () => {
-        if(this.state.active) return "active";
-        else return "";
-    }
 
     render() {
-        console.log(this.state.active);
+        console.log(this.state.renderInput);
         return (
             <div>
                 <div className="home-container">
+                    {!this.state.renderInput 
+                    ?
+                        <button onClick={this.renderInput} > Stuff </button>
+                    :
+                        <input className="active"/>
+                    }
 
-                    <button onClick={this.addActiveClass} className={this.getClassName()}> Stuff </button>
 
                 </div>
             </div>
