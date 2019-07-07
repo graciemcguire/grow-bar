@@ -13,7 +13,7 @@ app.get("/drink/:ingredient", async (req, res) => {
     res.send(json.drinks);
   } catch (e) {
     res.status(400).send(`something went wrong ¯\_(ツ)_/¯ `);
-  }
+  } 
 })
 
 app.get("/drinks/:ingredients", async (req, res) => {
@@ -23,7 +23,7 @@ app.get("/drinks/:ingredients", async (req, res) => {
     res.send(json);
   } catch (e) {
     res.status(400).send(`something went wrong ¯\_(ツ)_/¯ `);
-  }
+  } 
 })
 
 app.listen(port, () => {

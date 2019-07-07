@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles/style.css'
-import CocktailContainer from "./components/CocktailContainer"
-import HomeScreen from './components/HomeScreen';
+import CocktailContainer from "./components/cocktail-card-components/CocktailContainer"
+import HomeScreen from './components/intro-components/HomeScreen';
 
 export default class App extends Component {
 

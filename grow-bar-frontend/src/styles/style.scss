@@ -33,19 +33,35 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    .active {
+      color: rgb(133, 116, 116);
+      width: 50%;
+      height: 100px;
+      border-radius: 30px;
+      border: 10px solid rgb(196, 193, 189);
+      font-size: 3em;
+      text-align: center;
+      margin-bottom: 10px;
+      animation: roundOut 2s;
+    }
+
+    button {
+      animation: roundOut 1s;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: black;
+
+      .cocktail-icon {
+        width: 25px;
+        height: 25px;
+        color: white;
+      }
+    }
+
   }
 
-  .active {
-    color: rgb(133, 116, 116);
-    width: 50%;
-    height: 100px;
-    border-radius: 30px;
-    border: 10px solid rgb(196, 193, 189);
-    animation: roundOut 2s;
-    font-size: 3em;
-    text-align: center;
-    margin-bottom: 20px;
-  }
 }
   
 

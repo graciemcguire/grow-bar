@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CocktailCard from "./CocktailCard"
-import Header from "./Header"
+import Header from "../header-components/Header"
 
 export default class CocktailContainer extends Component {
 

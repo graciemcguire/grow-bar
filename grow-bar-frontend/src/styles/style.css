@@ -27,16 +27,26 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
-  .home-container .active {
-    color: #857474;
-    width: 50%;
-    height: 100px;
-    border-radius: 30px;
-    border: 10px solid #c4c1bd;
-    animation: roundOut 2s;
-    font-size: 3em;
-    text-align: center;
-    margin-bottom: 20px; }
+    .home-container .home-drink-input-container .active {
+      color: #857474;
+      width: 50%;
+      height: 100px;
+      border-radius: 30px;
+      border: 10px solid #c4c1bd;
+      font-size: 3em;
+      text-align: center;
+      margin-bottom: 10px;
+      animation: roundOut 2s; }
+    .home-container .home-drink-input-container button {
+      animation: roundOut 1s;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: black; }
+      .home-container .home-drink-input-container button .cocktail-icon {
+        width: 25px;
+        height: 25px;
+        color: white; }
 
 .header-div {
   background-color: black;
