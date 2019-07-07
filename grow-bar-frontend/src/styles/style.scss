@@ -26,26 +26,29 @@ h1 {
   button {
     background-color: white;
   }
+  .home-drink-input-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
   .active {
     color: rgb(133, 116, 116);
-    animation: bounceIn 2s;
+    width: 50%;
+    height: 100px;
+    border-radius: 30px;
+    border: 10px solid rgb(196, 193, 189);
+    animation: roundOut 2s;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 20px;
   }
 }
   
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.1);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+
 
 
 .header-div {
@@ -211,15 +214,6 @@ h1 {
   opacity: .5;
 }
 
-// ----------------- ANIMATIONS ------------------//
-
-.active {
-  color: green;
-}
-
-// -----------------------------------------------//
-
-
 @media only screen and (max-width: 1024px) {
   .drink-flexbox {
     display: flex;
@@ -275,5 +269,27 @@ h1 {
     p {
       font-size: 1em;
     }
+  }
+}
+
+// ----------------- KEYFRAME ANIMATIONS -----------------// 
+@keyframes roundOut {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+    border-radius: 3px;
+    border: 2px solid antiquewhite;
+    background-color: rgb(47, 52, 58);
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+    border-radius: 10px;
+    border: 5px solid rgb(56, 55, 54);
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 28px;
+    border: 10px solid rgb(199, 197, 194);
   }
 }

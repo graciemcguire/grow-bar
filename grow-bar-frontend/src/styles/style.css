@@ -20,19 +20,24 @@ h1 {
   align-items: center; }
   .home-container button {
     background-color: white; }
+  .home-container .home-drink-input-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
   .home-container .active {
     color: #857474;
-    animation: bounceIn 2s; }
+    width: 50%;
+    height: 100px;
+    border-radius: 30px;
+    border: 10px solid #c4c1bd;
+    animation: roundOut 2s;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 20px; }
 
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.1);
-    opacity: 0; }
-  60% {
-    transform: scale(1.2);
-    opacity: 1; }
-  100% {
-    transform: scale(1); } }
 .header-div {
   background-color: black;
   display: flex;
@@ -168,9 +173,6 @@ h1 {
 .opaque-drink {
   opacity: .5; }
 
-.active {
-  color: green; }
-
 @media only screen and (max-width: 1024px) {
   .drink-flexbox {
     display: flex;
@@ -209,5 +211,21 @@ h1 {
 
   .instructions-modal p {
     font-size: 1em; } }
+@keyframes roundOut {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+    border-radius: 3px;
+    border: 2px solid antiquewhite;
+    background-color: #2f343a; }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+    border-radius: 10px;
+    border: 5px solid #383736; }
+  100% {
+    transform: scale(1);
+    border-radius: 28px;
+    border: 10px solid #c7c5c2; } }
 
 /*# sourceMappingURL=style.css.map */

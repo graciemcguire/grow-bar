@@ -13,6 +13,12 @@ class HomeScreen extends Component {
         }))
     }
 
+    renderButton = () => {
+        setTimeout(() => {
+            return <button> Find My Drink</button>
+        }, 2000)
+    }
+
 
     render() {
         console.log(this.state.renderInput);
@@ -23,7 +29,10 @@ class HomeScreen extends Component {
                     ?
                         <button onClick={this.renderInput} > Stuff </button>
                     :
-                        <input className="active"/>
+                        <div className="home-drink-input-container">
+                            <input className="active"/>
+                            {this.renderButton()}
+                        </div>
                     }
 
 
