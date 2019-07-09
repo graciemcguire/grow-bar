@@ -37,7 +37,7 @@ class HomeScreen extends Component {
                     :
                         <div className="home-drink-input-container">
                             <input className="active"/>
-                            {this.state.renderInputButton ? <button><FaCocktail className="cocktail-icon"/></button> : null}
+                            {this.state.renderInputButton ? <button className="home-screen-button"><FaCocktail className="cocktail-icon"/></button> : null}
                         </div>
                     }
 
