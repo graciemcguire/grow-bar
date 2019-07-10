@@ -6,7 +6,28 @@ import HomeScreen from './components/intro-components/HomeScreen';
 export default class App extends Component {
 
   state = {
+    drinkValue: "",
+    drinks: [],
     homePage: true
+  }
+
+  fetchDrinks = async (event) => {
+    try {
+      event.preventDefault();
+      const response = await fetch(`http://localhost:3000/drink/${this.state.drinkValue}`);
+      const json = await response.json();
+      this.setState({
+        drinks: json
+      })
+    } catch (error) {
+      console.log("something went wrong")
+    }
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      drinkValue: event.target.value
+    })
   }
 
   renderContainer = () => {
@@ -19,7 +40,12 @@ export default class App extends Component {
     return (
       <div className="App">
 
-      {this.state.homePage ? <HomeScreen renderContainer={this.renderContainer}/> : <CocktailContainer />}
+      {this.state.homePage 
+      ? 
+        <HomeScreen renderContainer={this.renderContainer} handleChange={this.handleChange} drinkValue={this.state.drinkValue}/> 
+      : 
+        <CocktailContainer drinks={this.state.drinks} handleChange={this.handleChange} drinkValue={this.state.drinkValue}/>
+      }
 
 
     </div>
