@@ -11,12 +11,12 @@ export default class App extends Component {
     homePage: true
   }
 
-  fetchDrinks = (event) => {
+  fetchDrinks = async (event) => {
       if (event) event.preventDefault();
       console.log(this.state.drinkValue);
-      fetch(`http://localhost:3000/drink/${this.state.drinkValue}`)
-      .then(res => res.json())
-      .then(json => this.setState({drinks: json}));
+      const response = await fetch(`http://localhost:3000/drink/${this.state.drinkValue}`)
+      const json = await response.json();
+      this.setState({drinks: json});
   }
 
   handleChange = (event) => {

@@ -8,9 +8,6 @@
 body {
   min-width: 370px; }
 
-h1 {
-  color: red; }
-
 .home-container {
   width: 100vw;
   height: 100vh;
@@ -53,6 +50,26 @@ h1 {
       color: black; }
       .home-container .home-drink-input-container button:hover .cocktail-icon {
         color: black; }
+  .home-container .logo-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .home-container .logo-div .bar-logo h1 {
+      font-size: 10em;
+      color: white;
+      font-family: "Sorts Mill Goudy", serif; }
+    .home-container .logo-div .render-input-button {
+      font-size: 2em;
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px 15px;
+      border: 2px solid white;
+      transition: .5s ease; }
+    .home-container .logo-div .render-input-button:hover {
+      color: black;
+      background-color: white; }
 
 .header-div {
   background-color: black;

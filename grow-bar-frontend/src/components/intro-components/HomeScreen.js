@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {FaCocktail} from "react-icons/fa";
+import BarName from "./BarName"
 
 
 class HomeScreen extends Component {
@@ -38,7 +39,10 @@ class HomeScreen extends Component {
                 <div className="home-container">
                     {!this.state.renderInput 
                     ?
-                        <button onClick={this.renderInputAndButton} > Stuff </button>
+                        <div className="logo-div">
+                            <BarName />
+                            <button onClick={this.renderInputAndButton} className="render-input-button"> Find your drink </button>
+                        </div>
                     :
                         <div className="home-drink-input-container">
                             {/* <form onSubmit={this.props.renderContainer}> */}
