@@ -11,17 +11,12 @@ export default class App extends Component {
     homePage: true
   }
 
-  fetchDrinks = async (event) => {
-    try {
-      event.preventDefault();
-      const response = await fetch(`http://localhost:3000/drink/${this.state.drinkValue}`);
-      const json = await response.json();
-      this.setState({
-        drinks: json
-      })
-    } catch (error) {
-      console.log("something went wrong")
-    }
+  fetchDrinks = (event) => {
+      if (event) event.preventDefault();
+      console.log(this.state.drinkValue);
+      fetch(`http://localhost:3000/drink/${this.state.drinkValue}`)
+      .then(res => res.json())
+      .then(json => this.setState({drinks: json}));
   }
 
   handleChange = (event) => {
@@ -42,9 +37,17 @@ export default class App extends Component {
 
       {this.state.homePage 
       ? 
-        <HomeScreen renderContainer={this.renderContainer} handleChange={this.handleChange} drinkValue={this.state.drinkValue}/> 
+        <HomeScreen renderContainer={this.renderContainer} 
+                    handleChange={this.handleChange} 
+                    drinkValue={this.state.drinkValue}
+                    fetchDrinks={this.fetchDrinks}
+        /> 
       : 
-        <CocktailContainer drinks={this.state.drinks} handleChange={this.handleChange} drinkValue={this.state.drinkValue}/>
+        <CocktailContainer drinks={this.state.drinks} 
+                           fetchDrinks={this.fetchDrinks} 
+                           handleChange={this.handleChange} 
+                           drinkValue={this.state.drinkValue}
+        />
       }
 
 

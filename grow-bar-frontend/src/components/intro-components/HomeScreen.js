@@ -26,8 +26,13 @@ class HomeScreen extends Component {
         this.renderButtonTimeOut();
     }
 
+    fetchData = () => {
+        this.props.renderContainer();
+        this.props.fetchDrinks();
+    }
+
     render() {
-        console.log(this.state.renderInputButton);
+        console.log(this.props.drinkValue);
         return (
             <div>
                 <div className="home-container">
@@ -36,8 +41,19 @@ class HomeScreen extends Component {
                         <button onClick={this.renderInputAndButton} > Stuff </button>
                     :
                         <div className="home-drink-input-container">
-                            <input className="active"/>
-                            {this.state.renderInputButton ? <button className="home-screen-button"><FaCocktail className="cocktail-icon"/></button> : null}
+                            {/* <form onSubmit={this.props.renderContainer}> */}
+                                <input className="active" onChange={this.props.handleChange}/>
+                                {this.state.renderInputButton 
+                                    ? 
+                                        <button onClick={this.fetchData} 
+                                                className="home-screen-button" 
+                                                type="submit"><FaCocktail 
+                                                className="cocktail-icon"/>
+                                        </button> 
+                                    : 
+                                        null
+                                }
+                            {/* </form> */}
                         </div>
                     }
 

@@ -12,6 +12,7 @@ app.get("/drink/:ingredient", async (req, res) => {
     const json = await response.json();
     res.send(json.drinks);
   } catch (e) {
+
     res.status(400).send(`something went wrong ¯\_(ツ)_/¯ `);
   } 
 })
@@ -26,6 +27,14 @@ app.get("/drinks/:ingredients", async (req, res) => {
   } 
 })
 
+app.get("/test-route", async (req, res) => {
+  try {
+    res.send({"working": "i hope"});
+  } catch (error) {
+    res.status(400).send("not working");
+  }
+})
+
 app.listen(port, () => {
-  console.log("connected");
+  console.log(`listening on port ${port}`);
 })

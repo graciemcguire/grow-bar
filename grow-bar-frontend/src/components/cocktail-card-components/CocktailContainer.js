@@ -13,9 +13,13 @@ export default class CocktailContainer extends Component {
   }
 
   render() {
+    console.log(this.props.drinks);
     return (
       <div>
-        <Header handleChange={this.props.handleChange} fetchDrinks={this.fetchDrinks} drinkValue={this.props.drinkValue}/>
+        <Header handleChange={this.props.handleChange} 
+                fetchDrinks={this.props.fetchDrinks} 
+                drinkValue={this.props.drinkValue}
+        />
         <div className="drink-flexbox">
           {this.props.drinks.length === 0 ? null : this.renderCocktailCards()}
         </div>
