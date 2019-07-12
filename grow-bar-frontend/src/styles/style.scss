@@ -314,8 +314,12 @@ body {
       .home-form {
         input {
           width: 300px;
-          font-size: 12px;
+          font-size: 26px;
           margin-bottom: 30px;
+        }
+
+        input::placeholder {
+          font-size: 16px;
         }
     
         .render-input-button {
@@ -348,9 +352,16 @@ body {
     }
   }
 
-  .instructions-modal {
-    p {
-      font-size: 1em;
+  .instructions-overlay {
+    .instructions-modal {
+      p {
+        font-size: 1em;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
     }
   }
 }

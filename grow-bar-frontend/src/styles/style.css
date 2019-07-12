@@ -237,8 +237,10 @@ body {
       margin-bottom: 30px; }
     .home-container .logo-div .home-form input {
       width: 300px;
-      font-size: 12px;
+      font-size: 26px;
       margin-bottom: 30px; }
+    .home-container .logo-div .home-form input::placeholder {
+      font-size: 16px; }
     .home-container .logo-div .home-form .render-input-button {
       width: 70;
       font-size: 20px; }
@@ -259,7 +261,10 @@ body {
       height: 100%;
       position: relative; }
 
-  .instructions-modal p {
-    font-size: 1em; } }
+  .instructions-overlay .instructions-modal p {
+    font-size: 1em; }
+  .instructions-overlay .instructions-modal img {
+    width: 200px;
+    height: 200px; } }
 
 /*# sourceMappingURL=style.css.map */
