@@ -35,7 +35,7 @@ class HomeScreen extends Component {
                         <div className="logo-div">
                             <BarName />
                             <form className="home-form">
-                                <input className="active" onChange={this.props.handleChange}/>
+                                <input className="active" placeholder="Ingredients, Alcohol or Drink Name" onChange={this.props.handleChange}/>
                                 <button onClick={this.fetchData} className="render-input-button"> Find your drink </button>
                             </form>
                         </div>

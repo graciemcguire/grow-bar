@@ -12,11 +12,16 @@ export default class App extends Component {
   }
 
   fetchDrinks = async (event) => {
+    try {
       if (event) event.preventDefault();
       console.log(this.state.drinkValue);
       const response = await fetch(`http://localhost:3000/drink/${this.state.drinkValue}`)
       const json = await response.json();
       this.setState({drinks: json});
+    } catch(error) {
+      alert("Couldn't find a drink that has those ingredients, try another.");
+    }
+
   }
 
   handleChange = (event) => {
