@@ -11,7 +11,7 @@ export default class CocktailContainer extends Component {
 
   fetchDrinks = async (event) => {
     event.preventDefault();
-    const response = await fetch(`http://localhost:3000/drink/${this.state.drinkValue}`);
+    const response = await fetch(`http://localhost:3000/drink/${ this.state.drinkValue }`);
     const json = await response.json();
     this.setState({
       drinks: json
@@ -25,8 +25,9 @@ export default class CocktailContainer extends Component {
   }
 
   renderCocktailCards = () => {
+    console.log(this.state.drinks);
     const cocktailCards = this.state.drinks.map((drink, index) => {
-      return <CocktailCard drink={drink} key={index}/>
+      return <CocktailCard drink={ drink } key={ index }/>
     })
     return cocktailCards;
   }
@@ -34,9 +35,9 @@ export default class CocktailContainer extends Component {
   render() {
     return (
       <div>
-        <Header handleChange={this.handleChange} fetchDrinks={this.fetchDrinks} drinkValue={this.state.drinkValue}/>
+        <Header handleChange={ this.handleChange } fetchDrinks={ this.fetchDrinks } drinkValue={ this.state.drinkValue }/>
         <div className="drink-flexbox">
-          {this.state.drinks.length === 0 ? null : this.renderCocktailCards()}
+          { this.state.drinks.length === 0 ? null : this.renderCocktailCards() }
         </div>
 
       </div>
