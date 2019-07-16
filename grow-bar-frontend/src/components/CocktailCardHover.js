@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
 
 
@@ -19,3 +20,5 @@ export default class CocktailCardHover extends Component {
     )
   }
 }
+=======
+>>>>>>> d6cc4f21c0e9420c940db785fedc01e2295f27d1
